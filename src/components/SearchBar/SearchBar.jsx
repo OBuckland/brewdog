@@ -3,7 +3,9 @@ import styles from "./SearchBar.module.scss"
 
 const SearchBar = () => {
   return (
-    <div>SearchBar</div>
+    <>
+      <input type="text" placeholder="Search..."/>
+    </>
   )
 }
 
