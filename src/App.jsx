@@ -1,10 +1,16 @@
 import React from 'react';
-import './App.module.scss';
+import styles from './App.module.scss';
+
+import Main from "./containers/Main";
+import NavBar from './containers/NavBar';
 
 function App() {
   return (
 <>
-<h1>Brewdog</h1>
+<main>
+  <NavBar />
+  <Main />
+</main>
 </>
   );
 }
