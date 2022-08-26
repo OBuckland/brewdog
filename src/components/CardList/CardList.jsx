@@ -1,13 +1,14 @@
 import React from 'react'
 import styles from "./CardList.module.scss"
+import Card from "../Card"
 
 
-const CardList = () => {
+const CardList = (props) => {
+  const {beers} = props;
   
   return (
     <>
-    <div>CardList</div>
-
+    <div className={styles.cardContainer}>{beers.map((beer) => <Card key={beer.id} beer={beer} />)}</div>
     </>
   )
 }
