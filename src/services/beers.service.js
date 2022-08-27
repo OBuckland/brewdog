@@ -9,7 +9,7 @@ export const getBeers = () => {
 };
 
 export const getFilteredBeers = (searchTerm) => {
-  fetch(API_URL)
+  return fetch(API_URL)
     .then((response) => response.json())
     .then((jsonResponse) => {
       const searchedBeers = jsonResponse.filter((beer) =>
@@ -20,7 +20,7 @@ export const getFilteredBeers = (searchTerm) => {
 };
 
 export const getAbvBeers = () => {
-  fetch(`${API_URL}/?abv_gt=6`)
+  return fetch(`${API_URL}/?abv_gt=6`)
     .then((response) => response.json())
     .then((jsonResponse) => {
       return jsonResponse;
@@ -28,7 +28,7 @@ export const getAbvBeers = () => {
 };
 
 export const getClassicBeers = () => {
-  fetch(`${API_URL}/?brewed_before=012010`)
+  return fetch(`${API_URL}/?brewed_before=012010`)
     .then((response) => response.json())
     .then((jsonResponse) => {
       return jsonResponse;
@@ -36,7 +36,7 @@ export const getClassicBeers = () => {
 };
 
 export const getAcidicBeers = () => {
-  fetch(API_URL)
+  return fetch(API_URL)
     .then((response) => response.json())
     .then((jsonResponse) => {
       const acidicBeers = jsonResponse.filter((beer) => beer.ph < 4);
