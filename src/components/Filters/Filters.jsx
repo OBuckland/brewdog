@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "./Filters.module.scss"
 
 const Filters = (props) => {
-const { setAbvFilterOn, abvFilterOn, setClassicFilterOn, classicFilterOn, setAcidicFilterOn, acidicFilterOn } = props;
+const {updateAbvFilterOn, updateSearchTerm, setAbvFilterOn, abvFilterOn, setClassicFilterOn, classicFilterOn, setAcidicFilterOn, acidicFilterOn} = props;
   // const filterItems = [
   //   // {
   //   //   id: "abv",
@@ -44,7 +44,7 @@ const { setAbvFilterOn, abvFilterOn, setClassicFilterOn, classicFilterOn, setAci
     <>
        <div className={styles.filterItem}>
         <label for="abv"> High ABV (>6.0%) </label>
-        <input id="abv" type="checkbox" onChange={() => setAbvFilterOn(!abvFilterOn)}/>
+        <input id="abv" type="checkbox" onChange={() => updateSearchTerm(abvFilterOn = !abvFilterOn)}/>
       </div>
 
       <div className={styles.filterItem}>
