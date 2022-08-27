@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Quantico&family=Signika+Negative:wght@300;400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Signika Negative', 'sans-serif';
+}
+
+body{
+  background: linear-gradient(180deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
 }
