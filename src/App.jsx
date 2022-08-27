@@ -26,6 +26,61 @@ const getBeers = () => {
     getBeers("");
   }, [])
 
+  const getFilteredBeers = (searchTerm) => {
+    fetch(API_URL)
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      const searchedBeers = jsonResponse.filter((beer) => beer.name.toLowerCase().includes(searchTerm.toLowerCase()))
+      setBeers(searchedBeers)
+    });
+};
+
+  const updateSearchTerm = (searchTerm)  => {
+    setSearchTerm(searchTerm);
+    getFilteredBeers(searchTerm)
+  };
+  
+  const getAbvBeers = () => {
+    fetch(`${API_URL}/?abv_gt=6`)
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      setBeers(jsonResponse)
+    })
+  }
+
+  const updateAbvFilterOn = (abvFilterOn) => {
+    setAbvFilterOn(abvFilterOn);
+    getAbvBeers()
+  }
+
+  const getClassicBeers = () => {
+    fetch(`${API_URL}/?brewed_before=012010`)
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      setBeers(jsonResponse)
+    })
+  }
+
+  const updateClassicFilterOn = (classicFilterOn) => {
+    setClassicFilterOn(classicFilterOn)
+    getClassicBeers()
+  }
+
+  const getAcidicBeers = () => {
+    fetch(API_URL)
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      const acidicBeers = jsonResponse.filter((beer) => beer.ph <4)
+      setBeers(acidicBeers)
+    });
+  }
+
+  const updateAcidicFilterOn = (acidicFilterOn) => {
+    setAcidicFilterOn(acidicFilterOn)
+    getAcidicBeers()
+  }
+
+
   // const getBeers = (searchTerm = searchTerm, abvFilterOn = abvFilterOn, classicFilterOn = classicFilterOn, acidicFilterOn = acidicFilterOn) => {
   //   fetch(API_URL)
   //     .then((response) => response.json())
@@ -51,29 +106,27 @@ const getBeers = () => {
   //   getBeers("", false, false, false);
   // }, [])
 
-  const updateSearchTerm = (searchTerm = searchTerm, abvFilterOn = abvFilterOn, classicFilterOn = classicFilterOn, acidicFilterOn = acidicFilterOn)  => {
-    setSearchTerm(searchTerm);
-    setAbvFilterOn(abvFilterOn);
-    setClassicFilterOn(classicFilterOn);
-    setAcidicFilterOn(acidicFilterOn);
-    getBeers(searchTerm)
-  };
+  // const updateSearchTerm = (searchTerm = searchTerm, abvFilterOn = abvFilterOn, classicFilterOn = classicFilterOn, acidicFilterOn = acidicFilterOn)  => {
+  //   setSearchTerm(searchTerm);
+  //   setAbvFilterOn(abvFilterOn);
+  //   setClassicFilterOn(classicFilterOn);
+  //   setAcidicFilterOn(acidicFilterOn);
+  //   getBeers(searchTerm)
+  // };
 
-  const updateAbvFilterOn = (abvFilterOn) => {
-    setAbvFilterOn(abvFilterOn);
-    getBeers(abvFilterOn = abvFilterOn);
-  }
+
 
 
 
   return (
 <>
 <main>
-  <NavBar updateAbvFilterOn={updateAbvFilterOn} updateSearchTerm={updateSearchTerm} abvFilterOn={abvFilterOn} setAbvFilterOn={setAbvFilterOn} classicFilterOn={classicFilterOn} setClassicFilterOn={setClassicFilterOn} acidicFilterOn={acidicFilterOn} setAcidicFilterOn={setAcidicFilterOn} />
+  <NavBar updateAbvFilterOn={updateAbvFilterOn} updateSearchTerm={updateSearchTerm} updateClassicFilterOn={updateClassicFilterOn} updateAcidicFilterOn={updateAcidicFilterOn} abvFilterOn={abvFilterOn} classicFilterOn={classicFilterOn} acidicFilterOn={acidicFilterOn} />
   <Main beers={beers} />
 </main>
 </>
   );
-}
+
+  }
 
 export default App;

@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "./Filters.module.scss"
 
 const Filters = (props) => {
-const {updateAbvFilterOn, updateSearchTerm, setAbvFilterOn, abvFilterOn, setClassicFilterOn, classicFilterOn, setAcidicFilterOn, acidicFilterOn} = props;
+const {updateAbvFilterOn, updateClassicFilterOn, updateAcidicFilterOn, abvFilterOn, classicFilterOn, acidicFilterOn} = props;
   // const filterItems = [
   //   // {
   //   //   id: "abv",
@@ -44,17 +44,17 @@ const {updateAbvFilterOn, updateSearchTerm, setAbvFilterOn, abvFilterOn, setClas
     <>
        <div className={styles.filterItem}>
         <label for="abv"> High ABV (>6.0%) </label>
-        <input id="abv" type="checkbox" onChange={() => updateSearchTerm(abvFilterOn = !abvFilterOn)}/>
+        <input id="abv" type="checkbox" onChange={() => updateAbvFilterOn(!abvFilterOn)}/>
       </div>
 
       <div className={styles.filterItem}>
         <label for="classic"> Classic Range </label>
-        <input id="classic" type="checkbox" onChange={() => setClassicFilterOn(!classicFilterOn)}/>
+        <input id="classic" type="checkbox" onChange={() => updateClassicFilterOn(!classicFilterOn)}/>
       </div>
 
       <div className={styles.filterItem}>
         <label for="acidic"> Acidic (pH below 4%) </label>
-        <input id="acidic" type="checkbox" onChange={() => setAcidicFilterOn(!acidicFilterOn)}/>
+        <input id="acidic" type="checkbox" onChange={() => updateAcidicFilterOn(!acidicFilterOn)}/>
       </div>
       </>
   )
