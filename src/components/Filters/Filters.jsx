@@ -43,18 +43,18 @@ const {updateAbvFilterOn, updateClassicFilterOn, updateAcidicFilterOn, abvFilter
   return (
     <>
        <div className={styles.filterItem}>
-        <label for="abv"> High ABV (>6.0%) </label>
-        <input id="abv" type="checkbox" onChange={() => updateAbvFilterOn(!abvFilterOn)}/>
+        <label for="abv"> High ABV </label>
+        <input name="filters" id="abv" type="radio" onChange={() => updateAbvFilterOn(!abvFilterOn)}/>
       </div>
 
       <div className={styles.filterItem}>
         <label for="classic"> Classic Range </label>
-        <input id="classic" type="checkbox" onChange={() => updateClassicFilterOn(!classicFilterOn)}/>
+        <input name="filters" id="classic" type="radio" onChange={() => updateClassicFilterOn(!classicFilterOn)}/>
       </div>
 
       <div className={styles.filterItem}>
-        <label for="acidic"> Acidic (pH below 4%) </label>
-        <input id="acidic" type="checkbox" onChange={() => updateAcidicFilterOn(!acidicFilterOn)}/>
+        <label for="acidic"> Acidic </label>
+        <input name="filters" id="acidic" type="radio" onChange={() => updateAcidicFilterOn(!acidicFilterOn)}/>
       </div>
       </>
   )
