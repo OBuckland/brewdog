@@ -26,27 +26,27 @@ function App() {
     console.log(beers);
   }, []);
 
-  const updateSearchTerm = (searchTerm) => {
+  const updateSearchTerm = async (searchTerm) => {
     setSearchTerm(searchTerm);
-    const beers = getFilteredBeers(searchTerm);
+    const beers = await getFilteredBeers(searchTerm);
     setBeers(beers);
   };
 
-  const updateAbvFilterOn = (abvFilterOn) => {
+  const updateAbvFilterOn = async (abvFilterOn) => {
     setAbvFilterOn(abvFilterOn);
-    getAbvBeers();
+    const beers = await getAbvBeers();
     setBeers(beers);
   };
 
-  const updateClassicFilterOn = (classicFilterOn) => {
+  const updateClassicFilterOn = async (classicFilterOn) => {
     setClassicFilterOn(classicFilterOn);
-    getClassicBeers();
+    const beers = await getClassicBeers();
     setBeers(beers);
   };
 
-  const updateAcidicFilterOn = (acidicFilterOn) => {
+  const updateAcidicFilterOn = async (acidicFilterOn) => {
     setAcidicFilterOn(acidicFilterOn);
-    getAcidicBeers();
+    const beers = await getAcidicBeers();
     setBeers(beers);
   };
 
