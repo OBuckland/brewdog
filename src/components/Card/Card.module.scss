@@ -1,12 +1,16 @@
+@import "../../variables.scss";
 .card{
     margin: 15px;
     padding: 20px 10px;
-    border: solid black;
+    border: solid $primaryGreen 5px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 8px 8px gray;
     width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color: $secondaryGreen;
 }
 
 .image {

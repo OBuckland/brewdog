@@ -1,5 +1,21 @@
+@import "../../variables.scss";
+
 .navContainer {
-    border: solid black;
+    border: solid $primaryGreen 5px;
+    border-radius: 20px;
+    box-shadow: 10px, 10px;
     margin: 15px;
     padding: 20px;
+    height: 300px;
+    position: sticky;
+    top: 0px;
+    align-self: flex-start;
+
+}
+
+button {
+    background-color: $secondaryGreen;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
 }
