@@ -1,22 +1,45 @@
-const API_URL = "https://api.punkapi.com/v2/beers"
+const API_URL = "https://api.punkapi.com/v2/beers";
 
+export const getBeers = () => {
+  return fetch(API_URL)
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      return jsonResponse;
+    });
+};
 
-const getBeers = () => {
-    fetch(API_URL)
-      .then((response) => response.json())
-      .then((jsonResponse) => {
-        console.log(jsonResponse);
-      });
-  };
+export const getFilteredBeers = (searchTerm) => {
+  fetch(API_URL)
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      const searchedBeers = jsonResponse.filter((beer) =>
+        beer.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      return searchedBeers;
+    });
+};
 
-// const API_URL = "https://api.punkapi.com/v2/beers"
+export const getAbvBeers = () => {
+  fetch(`${API_URL}/?abv_gt=6`)
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      return jsonResponse;
+    });
+};
 
-// const getBeers = async () => {
-//     return fetch (API_URL)
-//     .then((res) => res.json())
-//     .then((jsonResponse) => {
-//         console.log(jsonResponse)
-//     })
-// }
+export const getClassicBeers = () => {
+  fetch(`${API_URL}/?brewed_before=012010`)
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      return jsonResponse;
+    });
+};
 
-export default getBeers;
+export const getAcidicBeers = () => {
+  fetch(API_URL)
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      const acidicBeers = jsonResponse.filter((beer) => beer.ph < 4);
+      return acidicBeers;
+    });
+};
