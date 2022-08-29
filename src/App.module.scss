@@ -1,12 +1,8 @@
 main {
   display: flex;
-  // background-color: rgb(20,82,119);
-  // background-image: linear-gradient(to left, rgb(20,82,119), rbg(131, 208, 203));
-  // background: linear-gradient(163.3deg, #A8C1ED 11.54%, #F3C1EB 90.45%)
 
-  // background: linear-gradient(180deg, hsla(202, 71%, 27%, 1) 0%, hsla(176, 45%, 66%, 1) 100%)
-
-  // background: linear-gradient(180deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
-  
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+  }
 }
 
