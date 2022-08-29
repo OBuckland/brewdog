@@ -13,8 +13,4 @@ describe("App tests", () => {
   it("should render", () => {
     expect(component).toBeTruthy();
   });
-
-  //   it("should render a button", () => {
-  //     expect(component.find("button").length).toEqual(1);
-  //   });
 });

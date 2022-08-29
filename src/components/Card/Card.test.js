@@ -29,8 +29,8 @@ describe("Card tests", () => {
     expect(component.find("p").length).toEqual(1);
   });
 
-  it("should return the correct description", () => {
-    expect(component.find("p").text()).toEqual(testBeer.description);
+  it("should return the correct tagline", () => {
+    expect(component.find("p").text()).toEqual(testBeer.tagline);
   });
 
   it("should render an image", () => {
