@@ -20,12 +20,14 @@ function App() {
   const [classicFilterOn, setClassicFilterOn] = useState(false);
   const [acidicFilterOn, setAcidicFilterOn] = useState(false);
 
+  // renders API data when page loads and prevents a loop of re-rendering
   useEffect(async () => {
     const beers = await getBeers("");
     setBeers(beers);
     console.log(beers);
   }, []);
 
+  // functions to apply the search criteria, update the relevant state & re-render beers
   const updateSearchTerm = async (searchTerm) => {
     setSearchTerm(searchTerm);
     const beers = await getFilteredBeers(searchTerm);

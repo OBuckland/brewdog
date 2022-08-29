@@ -1,5 +1,6 @@
 const API_URL = "https://api.punkapi.com/v2/beers";
 
+// fetches data from the API
 export const getBeers = () => {
   return fetch(API_URL)
     .then((response) => response.json())
@@ -8,6 +9,7 @@ export const getBeers = () => {
     });
 };
 
+// fetches data from the API and filters by search term
 export const getFilteredBeers = (searchTerm) => {
   return fetch(API_URL)
     .then((response) => response.json())
@@ -19,6 +21,7 @@ export const getFilteredBeers = (searchTerm) => {
     });
 };
 
+// fetches data using in-built extension to return only high ABV beers
 export const getAbvBeers = () => {
   return fetch(`${API_URL}/?abv_gt=6`)
     .then((response) => response.json())
@@ -27,6 +30,7 @@ export const getAbvBeers = () => {
     });
 };
 
+// fetches data using in-built extension to return only beers brewed before 2010
 export const getClassicBeers = () => {
   return fetch(`${API_URL}/?brewed_before=012010`)
     .then((response) => response.json())
@@ -35,6 +39,7 @@ export const getClassicBeers = () => {
     });
 };
 
+// fetches data from the API and filters by ph level
 export const getAcidicBeers = () => {
   return fetch(API_URL)
     .then((response) => response.json())
