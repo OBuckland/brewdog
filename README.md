@@ -69,10 +69,10 @@ Currently you cn only use one search field at a time, given more time I would li
 
 ### **Images**
 
-<img src="/src/assets/images/brewdog_desktop_view_GIF.gif" alt="Image of app" width="300px">
-<img src="src/assets/images/brewdog_desktop_view_screenshot.png" alt="Image of app" width="300px">
-<img src="/assets/images/brewdog_mobile_view_screenshot.png" alt="Image of app" width="300px">
-<img src="/assets/images/brewdog_mobile_view_screen_recording.gif" alt="Image of app" width="300px">
+<img src="src/assets/images/brewdog_desktop_view_GIF.gif" alt="Image of app" width="500px">
+<img src="src/assets/images/brewdog_desktop_view_screenshot.png" alt="Image of app" width="500px">
+<img src="src/assets/images/brewdog_mobile_view_screen_recording.gif" alt="Image of app" width="300px">
+<img src="src/assets/images/brewdog_mobile_view_screenshot.png" alt="Image of app" width="300px">
 
 ### **Links**
 
