@@ -4,11 +4,11 @@
 
 ### **Description**
 
-This is a React built App. It displays Brewdog beers, each beer has a: name, image, ABV and tagline. Data has been taken from the [Punk API] (https://api.punkapi.com/v2/beers, "Link to API"), which contained the beer data used for the app. Where possible the App has been unit tested.
+This is a React built App. It displays Brewdog beers, each beer has a: name, image, ABV and tagline. Data has been taken from the [Punk API](https://api.punkapi.com/v2/beers "Link to API"), which contained the beer data used for the app. Where possible the App has been unit tested.
 
 What I learnt from this project: the use of components and containers in practice, use of state, working with data from APIs
 
-Link to the [app](add github link here*****).
+Link to the [App](https://obuckland.github.io/brewdog/ "Link to App").
 
 ---
 
@@ -18,7 +18,7 @@ Link to the [app](add github link here*****).
 | Design                |
 | Functionality         |
 | Further development   |
-| Images                |
+| Images/Demos                |
 | Links                 |
 
 ### **Technology**
@@ -35,7 +35,7 @@ This is the image specification for the project:
 
 <img src="src/assets/images/brewdog-api-spec.png" alt="Image of app" width="400px">
 
-Colours chosen using the [Coolors] webside (https://coolors.co/ "Link to Coolors website"). App is responsive to device size.
+Colours chosen using the [Coolors](https://coolors.co/ "Link to Coolors website") webside. App is responsive to device size.
 
 
 ### **Functionality**
@@ -46,7 +46,7 @@ The user can search for a specific beer using the search bar. There are 3 filter
 Development of the project:
 Currently the user can only use one search field at a time, given more time I would like to develop this so that multiple fields can be used at once.
 
-### **Images**
+### **Images/Demos**
 
 <img src="src/assets/images/brewdog_desktop_view_GIF.gif" alt="Image of app" width="500px">
 <img src="src/assets/images/brewdog_desktop_view_screenshot.png" alt="Image of app" width="500px">
@@ -57,4 +57,4 @@ Currently the user can only use one search field at a time, given more time I wo
 
 [GitHub repository](https://github.com/OBuckland/brewdog "Link to GitHub")
 
-[Use the App]( "Link to Game")
+[Use the App](https://obuckland.github.io/brewdog/ "Link to App")
