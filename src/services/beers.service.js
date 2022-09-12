@@ -1,4 +1,8 @@
 const API_URL = "https://api.punkapi.com/v2/beers";
+// const APi_URL2 = `https://api.punkapi.com/v2/beers${getBeersByName}${getClassicBeers}`;
+
+// const getBeersByName = searchTerm ? `?beer_name=${searchTerm}` : "";
+// const getClassicBeers = classicBeers ? `?brewed-before=2011`: "";
 
 // fetches data from the API
 export const getBeers = () => {
