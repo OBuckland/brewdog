@@ -1,5 +1,6 @@
 main {
   display: flex;
+  margin: 34px;
 
     @media screen and (max-width: 480px) {
       flex-direction: column;
